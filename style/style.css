@@ -1,1 +1,741 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  max-width: 1600px;
+  margin: 0 auto !important;
+}
+
+header {
+  padding: 5% 10% 15% 10%;
+  background-image: url(../images/background_1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header .navigation .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+header .navigation .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .navigation .sidenav a:hover {
+  color: #f1f1f1;
+}
+
+header .navigation .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+header .navigation #main {
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+}
+
+header .first-page h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 15% 0 2% 0;
+  max-width: 500px;
+}
+
+header .first-page p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 300;
+  max-width: 580px;
+}
+
+header .first-page p span {
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  header .first-page h1 {
+    font-size: 48px;
+  }
+  header .first-page p {
+    font-size: 25px;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+main .sed {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .sed__photo {
+  width: 50%;
+}
+
+main .sed__photo img {
+  max-width: 100%;
+  height: 100%;
+}
+
+main .sed__faucibus {
+  width: 50%;
+  background-color: #f3f1ef;
+  padding: 2rem;
+}
+
+main .sed__faucibus h2 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+main .sed__faucibus p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: #666666;
+  margin-top: 2rem;
+  max-width: 500px;
+}
+
+@media (max-width: 767px) {
+  main .sed {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .sed__photo {
+    width: 100%;
+  }
+  main .sed__faucibus {
+    width: 100%;
+    padding: 2rem;
+  }
+  main .sed__faucibus p {
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  main .sed__faucibus {
+    padding: 2rem;
+  }
+  main .sed__faucibus p {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 1.5rem;
+  }
+}
+
+main .about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .about img {
+  max-width: 25%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  main .about img {
+    max-width: 50%;
+  }
+}
+
+main .instagram {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .instagram__etiam {
+  width: 50%;
+  background-color: #3f729b;
+  padding: 8% 0 0 8%;
+}
+
+main .instagram__etiam h2 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f9f9f9;
+}
+
+main .instagram__etiam p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #f9f9f9;
+  margin: 5% 0 4% 0;
+}
+
+main .instagram__etiam a {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 2% 1%;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+main .instagram__etiam a:hover {
+  background-color: #234561;
+}
+
+main .instagram__img {
+  width: 50%;
+  background-color: #3f729b;
+}
+
+main .instagram__img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  main .instagram .instagram {
+    width: 100%;
+  }
+  main .instagram .instagram__etiam {
+    width: 100%;
+    padding: 2rem 1.5rem 0.5rem 1.5rem;
+  }
+  main .instagram .instagram__etiam a {
+    width: 70%;
+    margin: 0 auto 0.5rem;
+  }
+  main .instagram .instagram__img {
+    width: 100%;
+  }
+  main .instagram .instagram__img img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  main .instagram .instagram__etiam a {
+    width: 60%;
+  }
+}
+
+main .self {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .self__bbg {
+  width: 25%;
+  background-color: #282b2f;
+}
+
+main .self__effacing {
+  width: 75%;
+  background-image: url("../images/bg_s5.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 15%;
+}
+
+main .self__effacing_rage {
+  width: 30%;
+  background-color: #212227;
+  padding: 10% 1% 8% 5%;
+}
+
+main .self__effacing_rage h3 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2ebd59;
+}
+
+main .self__effacing_rage h4 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #2ebd59;
+  margin-top: 0.6rem;
+}
+
+main .self__effacing_rage p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #f9f9f9;
+  margin: 2rem 0 2rem 0;
+  max-width: 220px;
+}
+
+main .self__effacing_rage a {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 2% 1%;
+  color: #2ebd59;
+  border: 2px solid #2ebd59;
+}
+
+main .self__effacing_rage a:hover {
+  background-color: #13662c;
+}
+
+@media (max-width: 767px) {
+  main .self .self__bbg {
+    display: none;
+  }
+  main .self .self__effacing {
+    width: 100%;
+    padding: 1.6rem 0;
+  }
+  main .self .self__effacing_rage {
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 60%;
+  }
+  main .self .self__effacing_rage a {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  main .self .self__effacing_rage {
+    width: 40%;
+  }
+}
+
+main .spotify {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .spotify__follow {
+  width: 50%;
+  background-color: #2ebd59;
+  padding: 8% 0 8% 10%;
+}
+
+main .spotify__follow h2 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f9f9f9;
+}
+
+main .spotify__follow p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: #f9f9f9;
+  margin: 5% 0 5% 0;
+}
+
+main .spotify__follow a {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 2% 1%;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+main .spotify__follow a:hover {
+  background-color: #1c6632;
+}
+
+main .spotify__itunes {
+  width: 50%;
+  background-color: #25272b;
+  padding: 8% 0 8% 7%;
+}
+
+main .spotify__itunes h2 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f9f9f9;
+}
+
+main .spotify__itunes p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-weight: 300;
+  color: #f9f9f9;
+  margin: 5% 0 5% 0;
+}
+
+main .spotify__itunes a {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 2% 1%;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+main .spotify__itunes a:hover {
+  background-color: #4a5058;
+}
+
+@media (max-width: 767px) {
+  main .spotify .spotify__follow {
+    width: 100%;
+  }
+  main .spotify .spotify__follow a {
+    width: 70%;
+  }
+  main .spotify .spotify__itunes {
+    width: 100%;
+  }
+  main .spotify .spotify__itunes a {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  main .spotify .spotify__follow a {
+    width: 70%;
+  }
+  main .spotify .spotify__itunes a {
+    width: 70%;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #212227;
+  padding: 7% 1% 7% 6%;
+}
+
+.footer h3 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f9f9f9;
+}
+
+.footer__dude p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #919191;
+  margin: 7% 0;
+  max-width: 280px;
+}
+
+.footer__dude span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #919191;
+  text-transform: uppercase;
+}
+
+.footer__contact {
+  max-width: 180px;
+}
+
+.footer__contact p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #919191;
+  margin-top: 8%;
+}
+
+.footer__contact p a {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  color: #919191;
+}
+
+.footer__contact_phone {
+  margin-bottom: 30%;
+}
+
+.footer__contact_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__contact_media a {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  height: 20px;
+  color: #919191;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.4rem;
+}
+
+.footer__contact_media a object {
+  color: #919191;
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__contact_follow {
+  margin-bottom: 13%;
+}
+
+.footer__subscribe {
+  max-width: 480px;
+}
+
+.footer__subscribe p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #919191;
+  margin: 5% 0 3% 0;
+}
+
+.footer__subscribe form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15%;
+}
+
+.footer__subscribe form input {
+  width: 100%;
+  background-color: #4d4e52;
+  border: none;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5%;
+  outline: none;
+}
+
+.footer__subscribe form input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #999999;
+}
+
+.footer__subscribe form input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #999999;
+}
+
+.footer__subscribe form input::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #999999;
+}
+
+.footer__subscribe form input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #999999;
+}
+
+.footer__subscribe form button {
+  border: none;
+  background-color: #4d4e52;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-right: 4%;
+}
+
+.footer__subscribe form:hover {
+  border: 2px solid #ffffff;
+}
+
+.footer__subscribe form:focus {
+  outline: none;
+  border: 3px solid #ffffff;
+}
+
+.footer__subscribe_logo {
+  margin-top: 4%;
+}
+
+.footer__subscribe_logo object {
+  margin-right: 2%;
+}
+
+.footer__subscribe_logo object:hover {
+  background-color: #504f4f;
+}
+
+.footer h3 {
+  margin-top: 1rem;
+}
+
+@media (max-width: 530px) {
+  .footer {
+    padding: 1rem;
+  }
+  .footer__subscribe {
+    max-width: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

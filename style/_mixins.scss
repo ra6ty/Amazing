@@ -1,0 +1,12 @@
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 2% 1%;
+}
