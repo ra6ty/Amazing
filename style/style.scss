@@ -1,2 +1,556 @@
 @import "mixins";
 
+body {
+  transition: background-color 0.5s;
+  max-width: 1600px;
+  margin: 0 auto !important;
+}
+
+header {
+  padding: 5% 10% 15% 10%;
+  background-image: url(../images/background_1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  & .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left 0.5s;
+    }
+  }
+  & .first-page {
+    & h1 {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 72px;
+      line-height: 1.2;
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin: 15% 0 2% 0;
+      max-width: 500px;
+    }
+    & p {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 300;
+      max-width: 580px;
+      & span {
+        font-weight: 700;
+      }
+    }
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 48px;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  & .sed {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &__photo {
+      width: 50%;
+      & img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+    &__faucibus {
+      width: 50%;
+      background-color: #f3f1ef;
+      padding: 2rem;
+      & h2 {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #666666;
+      }
+      & p {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: -0.025em;
+        color: #666666;
+        margin-top: 2rem;
+        max-width: 500px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .sed {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      &__photo {
+        width: 100%;
+      }
+      &__faucibus {
+        width: 100%;
+        padding: 2rem;
+        & p {
+          font-size: 28px;
+          font-weight: 300;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    .sed {
+      &__faucibus {
+        padding: 2rem;
+        & p {
+          font-size: 30px;
+          font-weight: 300;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+  .about {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    & img {
+      max-width: 25%;
+      height: 100%;
+    }
+    @media (max-width: 767px) {
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+  .instagram {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &__etiam {
+      width: 50%;
+      background-color: #3f729b;
+      padding: 8% 0 0 8%;
+      & h2 {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f9f9f9;
+      }
+      & p {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: 1px;
+        color: #f9f9f9;
+        margin: 5% 0 4% 0;
+      }
+      & a {
+        width: 50%;
+        @include button;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        &:hover {
+          background-color: #234561;
+        }
+      }
+    }
+    &__img {
+      width: 50%;
+      background-color: #3f729b;
+      & img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+    @media (max-width: 767px) {
+      .instagram {
+        width: 100%;
+        &__etiam {
+          width: 100%;
+          padding: 2rem 1.5rem 0.5rem 1.5rem;
+          & a {
+            width: 70%;
+            margin: 0 auto 0.5rem;
+          }
+        }
+        &__img {
+          width: 100%;
+          & img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+      .instagram {
+        &__etiam {
+          & a {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+  .self {
+    width: 100%;
+    display: flex;
+    &__bbg {
+      width: 25%;
+      background-color: #282b2f;
+    }
+    &__effacing {
+      width: 75%;
+      background-image: url("../images/bg_s5.png");
+      @include backgroundImage;
+      padding-bottom: 15%;
+      &_rage {
+        width: 30%;
+        background-color: #212227;
+        padding: 10% 1% 8% 5%;
+        & h3 {
+          font-family: "Fira Sans", sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #2ebd59;
+        }
+        & h4 {
+          font-family: "Fira Sans", sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #2ebd59;
+          margin-top: 0.6rem;
+        }
+        & p {
+          font-family: "Fira Sans", sans-serif;
+          font-size: 14px;
+          line-height: 1.2;
+          font-weight: 400;
+          color: #f9f9f9;
+          margin: 2rem 0 2rem 0;
+          max-width: 220px;
+        }
+        & a {
+          width: 65%;
+          @include button;
+          color: #2ebd59;
+          border: 2px solid #2ebd59;
+
+          &:hover {
+            background-color: #13662c;
+          }
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .self__bbg {
+        display: none;
+      }
+      .self__effacing {
+        width: 100%;
+        padding: 1.6rem 0;
+        &_rage {
+          margin: 0 auto;
+          padding: 1.5rem;
+          width: 60%;
+          & a {
+            width: 80%;
+          }
+        }
+      }
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+      .self__effacing_rage {
+        width: 40%;
+      }
+    }
+  }
+  & .spotify {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &__follow {
+      width: 50%;
+      background-color: #2ebd59;
+      padding: 8% 0 8% 10%;
+      & h2 {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f9f9f9;
+      }
+      & p {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: -0.025em;
+        color: #f9f9f9;
+        margin: 5% 0 5% 0;
+      }
+      a {
+        width: 45%;
+        @include button;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        &:hover {
+          background-color: #1c6632;
+        }
+      }
+    }
+    &__itunes {
+      width: 50%;
+      background-color: #25272b;
+      padding: 8% 0 8% 7%;
+      & h2 {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f9f9f9;
+      }
+      & p {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        font-weight: 300;
+        color: #f9f9f9;
+        margin: 5% 0 5% 0;
+      }
+      a {
+        width: 45%;
+        @include button;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        &:hover {
+          background-color: #4a5058;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .spotify__follow {
+        width: 100%;
+        & a {
+          width: 70%;
+        }
+      }
+      .spotify__itunes {
+        width: 100%;
+        & a {
+          width: 70%;
+        }
+      }
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+      .spotify__follow {
+        & a {
+          width: 70%;
+        }
+      }
+      .spotify__itunes {
+        & a {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+.footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #212227;
+  padding: 7% 1% 7% 6%;
+  & h3 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f9f9f9;
+  }
+  &__dude {
+    & p {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 300;
+      color: #919191;
+      margin: 7% 0;
+      max-width: 280px;
+    }
+    & span {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 300;
+      color: #919191;
+      text-transform: uppercase;
+    }
+  }
+  &__contact {
+    max-width: 180px;
+    & p {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 300;
+      color: #919191;
+      margin-top: 8%;
+      & a {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.5;
+        text-decoration: none;
+        color: #919191;
+      }
+    }
+    &_phone {
+      margin-bottom: 30%;
+    }
+    &_media {
+      display: flex;
+      flex-direction: column;
+      & a {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        height: 20px;
+        color: #919191;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 0.4rem;
+        & object {
+          color: #919191;
+          margin-right: 1rem;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    &_follow {
+      margin-bottom: 13%;
+    }
+  }
+  &__subscribe {
+    max-width: 480px;
+    p {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 300;
+      color: #919191;
+      margin: 5% 0 3% 0;
+    }
+    & form {
+      display: flex;
+      margin-bottom: 15%;
+      & input {
+        width: 100%;
+        background-color: #4d4e52;
+        border: none;
+        font-family: "Fira Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 5%;
+        outline: none;
+        &::placeholder {
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          color: #999999;
+        }
+      }
+      & button {
+        border: none;
+        background-color: #4d4e52;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right: 4%;
+      }
+      &:hover {
+        border: 2px solid #ffffff;
+      }
+      &:focus {
+        outline: none;
+        border: 3px solid #ffffff;
+      }
+    }
+    &_logo {
+      margin-top: 4%;
+      & object {
+        margin-right: 2%;
+        &:hover {
+          background-color: #504f4f;
+        }
+      }
+    }
+  }
+  h3 {
+    margin-top: 1rem;
+}
+}
+@media (max-width: 530px) {
+    .footer {
+      padding: 1rem;
+      &__subscribe {
+          max-width: 400px;
+      }
+    }
+  }
