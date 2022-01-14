@@ -192,7 +192,6 @@ main .about {
 
 main .about img {
   max-width: 25%;
-  height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -419,7 +418,7 @@ main .spotify__follow h2 {
 
 main .spotify__follow p {
   font-family: "Fira Sans", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: -0.025em;
@@ -466,7 +465,7 @@ main .spotify__itunes h2 {
 
 main .spotify__itunes p {
   font-family: "Fira Sans", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1.2;
   letter-spacing: -0.025em;
   font-weight: 300;
@@ -705,13 +704,9 @@ main .spotify__itunes a:hover {
   padding-right: 4%;
 }
 
-.footer__subscribe form:hover {
-  border: 2px solid #ffffff;
-}
-
-.footer__subscribe form:focus {
+.footer__subscribe form input:focus {
   outline: none;
-  border: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
 }
 
 .footer__subscribe_logo {

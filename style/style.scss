@@ -160,7 +160,6 @@ main {
     flex-wrap: wrap;
     & img {
       max-width: 25%;
-      height: 100%;
     }
     @media (max-width: 767px) {
       img {
@@ -331,7 +330,7 @@ main {
       }
       & p {
         font-family: "Fira Sans", sans-serif;
-        font-size: 30px;
+        font-size: 40px;
         line-height: 1.2;
         font-weight: 300;
         letter-spacing: -0.025em;
@@ -361,7 +360,7 @@ main {
       }
       & p {
         font-family: "Fira Sans", sans-serif;
-        font-size: 30px;
+        font-size: 40px;
         line-height: 1.2;
         letter-spacing: -0.025em;
         font-weight: 300;
@@ -524,12 +523,10 @@ main {
         justify-content: space-evenly;
         padding-right: 4%;
       }
-      &:hover {
-        border: 2px solid #ffffff;
-      }
-      &:focus {
+      
+      & input:focus {
         outline: none;
-        border: 3px solid #ffffff;
+        border-left: 3px solid #ffffff;
       }
     }
     &_logo {
